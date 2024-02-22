@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,7 +25,10 @@
             <h1>
                 <a href="index.html"><img src="imagem/logo.png" alt="Logotipo"></a>
             </h1>
-            <nav>
+            <span id="iconMenu" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+                </span>
+            <nav id="itens">
                 <a href="index.html" tabindex="1">Home</a>
                 <!--tabindex é utilizado para a acessibilidade-->
                 <a href="pacotes.html" tabindex="2">Pacotes</a>
@@ -33,6 +37,7 @@
             </nav>
         </div>
     </header>
+
 
 
     <main class="conteudo">
@@ -123,6 +128,7 @@
         </div>
 
     </footer>
+    <script src="js/interacoes.js"></script>
 
 </body>
 
