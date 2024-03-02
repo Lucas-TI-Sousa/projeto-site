@@ -1,20 +1,21 @@
-@charset "utf-8";
+@charset "utf-8"; 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/*Criando regras usando o fluxo de trabalho do MOBILE FRIS  -320px 
+/* 
+Criando regras usando o fluxo de trabalho do MOBILE FIRST - 320px
 
-OBS: As regras aqui criadas também serviram para o site como um todo, ou seja, independente do tamanho da minha tela*/
+OBS: As regras aqui criadas também servirão par o site como um todo, ou seja, idependente do tamanho da minha tela. 
+*/
 
-/* REGRAS GERAIS*/
+/* Regras Gerais */
 
 body{
     font-family: "Ubuntu", sans-serif;
     background-image: url(../imagem/hypnotize.png);
     background-attachment: fixed;
     margin: 0;
-    width: 0;
-    padding: 100%;
-
+    padding: 0;
+    width: 100%;
 }
 
 h1, h2, h3, h4, p, figure{
@@ -26,9 +27,10 @@ img{
     max-width: 100%;
 }
 
-/* Regras do topo*/
+/* Regras do topo */
+
 #topo{
-    background-color: rgba(24,56,29,0.9);
+    background-color: rgba(24, 56, 29, 0.9);
     border-bottom: solid 1px;
     text-align: center;
     margin-bottom: 15px;
@@ -39,7 +41,7 @@ h1 img{
     width: 200px;
 }
 
-nav {
+nav{
     min-height: 40px;
     display: none;
     text-transform: uppercase;
@@ -48,10 +50,11 @@ nav {
     line-height: 40px;
     padding-left: 1%;
 }
-nav a:link, nav a:visited,  #iconMenu:link, #iconMenu:visited{
+
+nav a:link, nav a:visited, #iconMenu:link, #iconMenu:visited{
     text-decoration: none;
     color: white;
-    transition: background-color 1s;
+    transition: backgroud-color 1s;
     min-height: inherit;
     display: flex;
     justify-content: center;
@@ -61,10 +64,10 @@ nav a:link, nav a:visited,  #iconMenu:link, #iconMenu:visited{
 nav a:hover, nav a:focus, #iconMenu:hover, #iconMenu:focus{
     background-color: #A98E12;
     color: #000;
-    transition: background-color 1s;
-    border-radius: 5px;
-
+    transition: backgroud-color 1s;
+    border-radius: 5%;
 }
+
 #iconMenu{
     color: white;
     cursor: pointer;
@@ -76,82 +79,452 @@ nav a:hover, nav a:focus, #iconMenu:hover, #iconMenu:focus{
     font-size: 40px;
 }
 
+/* Footer - Rodapé */
 
-/*Rodapé/ footer*/
 .rodape{
-    border-top: solid #06632E;
+    border-top: solid #06632E 5px;
     background-color: #000;
     color: #7F7F80;
     text-align: center;
     width: 100%;
 }
- .rodape p, li{
-    font-size: 16px;
- }
- .rodape img{
-    margin-left: 0 5px;
- }
- .rodape-conteudo{
+
+.rodape p, li{
+    font-size: 16px;    
+}
+
+.rodape img{
+    margin: 0 5px;
+}
+
+.rodape-conteudo{
     padding: 15px;
     color: #fff;
- }
- .rodape-conteudo ul{
+}
+
+.rodape-conteudo ul{
     list-style: none;
-    margin: auto;
+    margin: 0 auto;
     padding: 10px 0;
- }
- #logo-rodape{
+}
+
+#logo-rodape{
     min-width: 146px;
-    width: 150px; 
- }
- .menu-rodape{
+    width: 150px;
+    margin: 0 auto;
+}
+
+.menu-rodape a{
     text-decoration: none;
     color: #7F7F80;
- }
- .redes img{
+}
+
+.menu-rodape a:hover{
+    color: #fff;
+}
+
+.redes img{
     min-width: 35px;
     width: 35px;
- }
- .redes ul{
-    display: flex;
-    text-align: center;
+}
 
- }
- .redes li{
-    width: 15px;
-    padding: 3px;
-
- }
- .assinatura{
+.assinatura{
     color: #fff;
     background-color: #7F7F80;
     text-align: center;
     height: auto;
     padding: 1%;
+}
 
- }
- .assinatura p{
+.assinatura p{
     margin-top: 3%;
+}
 
- }
- #conteudo{
+/* Regras para o conteúdo */
+
+#conteudo{
     max-width: 95%;
     margin: auto;
- }
+}
+
 #conteudo article{
     background-color: white;
     margin: 15px 0;
     padding: 1%;
     box-sizing: grey 1px 1px 5px;
 }
-#conteudo h2, #conteudo h3, #conteudo p {
-    padding: 1%;
 
+#conteudo h2, #conteudo h3, #conteudo p{
+    padding: 1%;
 }
-.titulos{
+
+.titulo{
     font-size: 1.4em;
     color: #ED6D19;
     text-align: center;
     text-transform: uppercase;
 }
 
+/* HOME */
+
+.destaque img{
+    border-bottom: dotted #ED6D19 5px;
+}
+
+.text-destaque{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 80px;
+    bottom: 100px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.text-destaque h2{
+    color: #000 !important;
+    /* Friza o efeito aplicado, cancelando todos os outros */
+    margin-top: 5px;
+    padding: 5px 0 3px 50px;
+}
+
+.text-destaque p{
+    margin-top: 5px;
+    font-size: 1.1em;
+    padding: 0 0 5px 50px;
+}
+
+#frase{
+    color: #fff;
+    background-color: #ED6D19;
+    text-align: center;
+    height: 80px;
+}
+
+#frase p{
+    font-size: 1em;
+    padding: 12px;
+}
+
+.card{
+    margin: 15px 0;
+    padding: 5%;
+}
+
+.card p{
+    text-align: center;
+    padding: 1% 0 2% 0;
+}
+
+.card-conteudo figure{
+    margin: 1%;
+    position: relative;
+    box-shadow: grey 1px 1px 5px;
+}
+
+.card-conteudo figcaption{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    background-color: rgba(127, 127, 128, 0.8);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-conteudo figure img{
+    transition: 1s;
+    filter: opacity(1);
+}
+
+.card-conteudo a:hover img, .card-conteudo a:focus img{
+    filter: opacity(0.6);
+}
+
+#titulo-video{
+    color: #fff;
+    padding: 15px;
+}
+
+#video{
+    width: 100%;
+    background-color: rgba(6, 99, 46, 0.6);
+    text-align: center;
+}
+
+iframe{
+    margin: auto;
+    max-width: 80%;
+    display: block;
+    padding: 2% 0;
+}
+
+/* CONTATO (Regras para o formulário) */
+
+#form-contato{
+    margin: auto;
+    max-width: 700px;
+    width: 95%;
+}
+
+#form-contato input, #form-contato textarea{
+    border: solid 2px black;
+    width: 100%;
+    margin: 4px auto;
+}
+
+#form-contato input{
+    height: 30px;
+}
+
+#form-contato label{
+    font-weight: bold;
+}
+
+#form-contato button{
+    border: none;
+    padding: 2%;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+}
+
+#form-contato button:hover, #form-contato button:focus{
+    background-color: #ED6D19;
+    cursor: pointer;
+}
+
+.conteudo-info p{
+    margin: 5%;
+    text-align: center;
+}
+
+.localizacao p{
+    text-align: center;
+}
+
+/* PACOTES */
+
+#card-pacote{
+    background-color: rgba(6, 99, 46, 0.6);
+    padding: 10px;
+    text-align: center;
+}
+
+.card-pacote-info{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1%;
+    box-shadow: grey 1px 1px 5px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.pac-fotos, .pac-reserva{
+    background-color: #A98E12;
+    color: #000;
+    width: 80px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pac-flex{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pac-fotos a:hover, .pac-reserva a:hover{
+    background-color: #ECDA87;
+    color: #fff;
+    transition: background-color 1s;
+    border-radius: 5%;
+}
+
+.pac-fotos a:link, .pac-reserva a:link, .pac-fotos a:visited, .pac-reserva a:visited{
+    color: #000;
+    transition: background-color 0.5s;
+    min-height: inherit;
+    padding: 1px 8px;
+    text-decoration: none;
+}
+
+/* ACESSÓRIOS */
+
+.acessorios{
+    margin: auto;
+    padding: 15px;
+}
+
+.produtos img{
+    max-width: 100px;
+    border: solid #7F7F80 3px;
+    border-radius: 100%;
+    box-shadow: grey 1px 1px 5px;
+}
+
+.produtos{
+    box-shadow: grey 1px 1px 5px;
+    text-align: center;
+    padding: 20px;
+    width: 220px;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.produtos h4{
+    color: #ED6D19;
+    text-transform: uppercase;
+}
+
+.img-produto img{
+    width: 100px;
+    height: 100px;
+}
+
+.acesse{
+    text-transform: uppercase;
+    background-color: #ED6D19;
+    width: 100px;
+    height: 20px;
+    padding: 3px;
+    margin: -10px auto;
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media  screen and (min-width: 700px){
+    #topo{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 80px;
+        z-index: 1000;
+        /* joga todos os elementos(topo) para cima dos utros elementos da página */
+    }
+    #topo div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #iconMenu{
+        display: none;
+    }
+    h1{
+        margin-left: 3%;
+        margin-top: 5px;
+        width: 150px;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a{
+        padding: 10px;
+    }
+    .conteudo{
+        margin-top: 90px;
+    }
+    .rodape-conteudo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo-rodape, .menu-rodape, .redes{
+        margin: 0 auto;
+    }
+    .assinatura p{
+        padding-top: 1%;
+    }
+    .card-conteudo{
+        display: flex;
+    }
+    .acessorios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .produtos{
+        margin: 10px 1%;
+        height: auto;
+    }
+    .acesse{
+        margin: 0 auto;
+    }
+    #card-pacote{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-pacote-info{
+        margin: 0.4%;
+    }
+    .acessorios{
+        margin: 0 15%;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .card-conteudo figure img{
+        height: 130px;
+        width: 210px;
+    }
+    .titulo{
+        margin-top: 100px;
+    }    
+    #tituloHome{
+        margin-top: 0;
+    }
+    .text-destaque h2{
+        margin-top: -4px;
+    }
+    .produtos{
+        height: 250px;
+    }
+    .acesse{
+        margin: 20px auto;
+    }
+    #conteudo-contato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #conteudo article{
+        margin: 15px 5px;
+    }
+    .localizacao iframe{
+        height: 500px;
+    }
+    #localizacao-end{
+        height: 745px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .conteudo{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .cont-home{
+        padding-top: 90px;
+    }
+    nav{
+        justify-content: flex-end;
+        width: 73%;
+        /* position relative;
+        left: 245px;
+        justify-content: space-evenly; */
+    }
+    #tituloLoc{
+        margin: 70px;
+    }
+}
